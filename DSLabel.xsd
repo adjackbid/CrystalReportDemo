@@ -12,13 +12,14 @@
   <xs:element name="DSLabel" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSLabel" msprop:Generator_UserDSName="DSLabel">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FROM" msprop:Generator_ColumnVarNameInTable="columnFROM" msprop:Generator_ColumnPropNameInRow="FROM" msprop:Generator_ColumnPropNameInTable="FROMColumn" msprop:Generator_UserColumnName="FROM" type="xs:string" minOccurs="0" />
               <xs:element name="TO" msprop:Generator_ColumnVarNameInTable="columnTO" msprop:Generator_ColumnPropNameInRow="TO" msprop:Generator_ColumnPropNameInTable="TOColumn" msprop:Generator_UserColumnName="TO" type="xs:string" minOccurs="0" />
               <xs:element name="WEIGHT" msprop:Generator_ColumnVarNameInTable="columnWEIGHT" msprop:Generator_ColumnPropNameInRow="WEIGHT" msprop:Generator_ColumnPropNameInTable="WEIGHTColumn" msprop:Generator_UserColumnName="WEIGHT" type="xs:string" minOccurs="0" />
               <xs:element name="ITEMNO" msprop:Generator_ColumnVarNameInTable="columnITEMNO" msprop:Generator_ColumnPropNameInRow="ITEMNO" msprop:Generator_ColumnPropNameInTable="ITEMNOColumn" msprop:Generator_UserColumnName="ITEMNO" type="xs:string" minOccurs="0" />
+              <xs:element name="QRCODE" msprop:Generator_ColumnVarNameInTable="columnQRCODE" msprop:Generator_ColumnPropNameInRow="QRCODE" msprop:Generator_ColumnPropNameInTable="QRCODEColumn" msprop:Generator_UserColumnName="QRCODE" type="xs:base64Binary" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

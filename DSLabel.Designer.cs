@@ -287,6 +287,8 @@ namespace CrystalReportDemo {
             
             private global::System.Data.DataColumn columnITEMNO;
             
+            private global::System.Data.DataColumn columnQRCODE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DataTable1DataTable() {
@@ -354,6 +356,14 @@ namespace CrystalReportDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QRCODEColumn {
+                get {
+                    return this.columnQRCODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -389,13 +399,14 @@ namespace CrystalReportDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string FROM, string TO, string WEIGHT, string ITEMNO) {
+            public DataTable1Row AddDataTable1Row(string FROM, string TO, string WEIGHT, string ITEMNO, byte[] QRCODE) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FROM,
                         TO,
                         WEIGHT,
-                        ITEMNO};
+                        ITEMNO,
+                        QRCODE};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -422,6 +433,7 @@ namespace CrystalReportDemo {
                 this.columnTO = base.Columns["TO"];
                 this.columnWEIGHT = base.Columns["WEIGHT"];
                 this.columnITEMNO = base.Columns["ITEMNO"];
+                this.columnQRCODE = base.Columns["QRCODE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -435,6 +447,8 @@ namespace CrystalReportDemo {
                 base.Columns.Add(this.columnWEIGHT);
                 this.columnITEMNO = new global::System.Data.DataColumn("ITEMNO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnITEMNO);
+                this.columnQRCODE = new global::System.Data.DataColumn("QRCODE", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQRCODE);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -641,6 +655,22 @@ namespace CrystalReportDemo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] QRCODE {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableDataTable1.QRCODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("資料表 \'DataTable1\' 中資料行 \'QRCODE\' 的值是 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.QRCODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsFROMNull() {
                 return this.IsNull(this.tableDataTable1.FROMColumn);
             }
@@ -685,6 +715,18 @@ namespace CrystalReportDemo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetITEMNONull() {
                 this[this.tableDataTable1.ITEMNOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQRCODENull() {
+                return this.IsNull(this.tableDataTable1.QRCODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQRCODENull() {
+                this[this.tableDataTable1.QRCODEColumn] = global::System.Convert.DBNull;
             }
         }
         

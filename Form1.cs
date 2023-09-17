@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace CrystalReportDemo
 {
@@ -27,7 +28,10 @@ namespace CrystalReportDemo
                 string sWeight = ttbWeight.Text.Trim();
                 string sItemNo = ttbItemNo.Text.Trim();
 
-                PrintLabel(sFrom, sTo, sWeight, sItemNo);
+                //fake img
+                byte[] imageArray = System.IO.File.ReadAllBytes(@"test.jpg");
+
+                PrintLabel(sFrom, sTo, sWeight, sItemNo, imageArray);
 
             }
             catch (Exception ex)
@@ -36,7 +40,7 @@ namespace CrystalReportDemo
             }
         }
 
-        private void PrintLabel(string sFrom, string sTo, string sWeight, string sItemNo)
+        private void PrintLabel(string sFrom, string sTo, string sWeight, string sItemNo,byte[] img)
         {
             DSLabel ds = new DSLabel();
 
@@ -48,6 +52,7 @@ namespace CrystalReportDemo
             dr_row["TO"] = sTo;
             dr_row["WEIGHT"] = sWeight;
             dr_row["ITEMNO"] = sItemNo;
+            dr_row["QRCODE"] = img;
             dt.Rows.Add(dr_row);
 
             //Create CR Report Object
